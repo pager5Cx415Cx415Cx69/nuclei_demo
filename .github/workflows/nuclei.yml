@@ -15,7 +15,7 @@ jobs:
         uses: projectdiscovery/nuclei-action@main
         with:
           target: https://example.com
-          templates: https://github.com/projectdiscovery/nuclei-templates/tree/main/http/cves
+          templates: https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2000/CVE-2000-0114.yaml
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
