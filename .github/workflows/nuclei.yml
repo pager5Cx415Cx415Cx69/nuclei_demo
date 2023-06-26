@@ -14,8 +14,8 @@ jobs:
       - name: Nuclei - Vulnerability Scan
         uses: projectdiscovery/nuclei-action@main
         with:
-          target: https://example.com
-          templates: /home/pager/nuclei-templates/cves
+          target: http://testphp.vulnweb.com/
+          templates: custom_template_path
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
