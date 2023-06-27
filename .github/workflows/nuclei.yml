@@ -15,7 +15,6 @@ jobs:
         uses: projectdiscovery/nuclei-action@main
         with:
           target: http://testphp.vulnweb.com/
-          templates: custom_template_path
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
