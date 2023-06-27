@@ -14,7 +14,7 @@ jobs:
       - name: Nuclei - Vulnerability Scan
         uses: projectdiscovery/nuclei-action@main
         with:
-          target: http://testphp.vulnweb.com/
+          target: http://localhost:3000/login
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
@@ -22,7 +22,7 @@ jobs:
           name: nuclei.log
           path: nuclei.log
 
-      - name: GitHub Security Dashboard Alerts update
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: nuclei.sarif
+    #  - name: GitHub Security Dashboard Alerts update
+    #    uses: github/codeql-action/upload-sarif@v2
+    #    with:
+    #      sarif_file: nuclei.sarif
